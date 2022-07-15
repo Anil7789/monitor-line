@@ -1,0 +1,470 @@
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div id="dismiss">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+        <ul class="list-unstyled" style="margin-top:130px;">
+            <li>
+                <i class="fa fa-home mt-4 icon-size text-warning" aria-hidden="true"></i>
+            <li>
+                <i class="fa fa-bar-chart mt-4 icon-size text-warning" aria-hidden="true"></i>
+            </li>
+            <li>
+                <i class="fa fa-laptop mt-4 icon-size text-warning"></i>
+            </li>
+
+        </ul>
+    </nav>
+    <!-- Page Content  -->
+    <div id="content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- <div class="col-md-2">
+                    <div class="calender-icon pt-2">
+                        <a href="#"><img
+                         src="assest/images/funded-acadmey.png" height="70" width="70"
+                         alt="monitor-line" class="img-responsive ml-5"></a>
+                    </div>
+                </div> -->
+                <div class="col-md-2 mt-2 width50">
+                    <button type="button" id="sidebarCollapse" class="btn btn-warning text-white">
+                        <i class="fa fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                </div>
+                <button class="btn btn-warning text-white d-inline-block d-lg-none ml-auto" type="button"
+                    data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-align-justify"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="container ml-0 pl-0">
+                        <div class="row">
+
+                            <div class="col-md-4 clstext-left pl-0">
+                                <div class="calender-icon pt-2">
+                                    <a href="#"><img
+                                            src="../../assets/images/thumbnail_Monitor-Line LOGO.jpg" height="60"
+                                            width="100" alt="monitor-line" class="img-responsive"></a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="calender-icon pt-2 ml-5 text-right">
+
+                                    <button class="btn btn-default dropdown-toggle rounded-circle btn-bell"
+                                        type="button" id="menu1" data-toggle="dropdown">
+                                        <img src="../../assets/images/149071.png" alt="user" height="40" width="40"
+                                            class="img-responsive">
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">user_1</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">user_2</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">user_3</a>
+                                        </li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">user_4</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="pagecontent">
+            <div class="container maincontentstart">
+                <div class="row">
+                    <div class="mb-3 text-center col-12">
+                        <button type="button" class="btn btn-primary confirmationBtn" data-toggle="modal"
+                            data-target="#exampleModal">
+                            Confirmation
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Once you click continue here, you current account will be made inactive and a
+                                        new account will be created for you with the same conditions as the
+                                        current account (initial balance, leverage etc) and you will be sent
+                                        the new credentials to your email on file. Are you sure you want to proceed?
+                                    </p>
+                                    <div class="loaderdiv">
+                                        <div class="spinnerLoad" role="status">
+                                            <img src="./assest/images/Loading_icon.gif" alt="" style="height: 150px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary continueBtn" title="your content"
+                                        id="popupshow" disabled="disabled">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="MySecondPopup" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Successfully submited..
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary continueBtn">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions"
+                            style="width: 100%; height: 400px; display: block;"></highcharts-chart>
+                    </div>
+                    <div class="col-lg-5 mt-3 chartright-div">
+                        <div class="right-box rounded" style="background-color: #fff;color:#000;">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                            <span>
+                                $4,250 <br>
+                                Today Profit
+                            </span>
+
+                        </div>
+                        <div class="right-box mt-3 rounded" style="background-color: #fff;color:#000;">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                            <span>
+                                $2,198 <br>
+                                Today permitted Balance
+                            </span>
+                        </div>
+                        <div class="right-box mt-3 rounded" style="background-color: #fff;color:#000;">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                            <span>
+                                $4,250 <br>
+                                Maximum permitted Loss
+                            </span>
+                        </div>
+                        <div class="right-box mt-3 rounded" style="background-color: #fff;color:#000;">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                            <span>
+                                $4,250 <br>
+                                Last Update
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mt-4 mb-3 pt-4 pb-4">
+                    <div class="summery-box pl-4 pt-3 pb-3">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <h3 class="text-primary">Summary</h3>
+                                <p class="summery-box-1">Deposit</p>
+                                <p class="summery-box-1">Start Date</p>
+                                <p class="summery-box-1">End Date</p>
+                                <p class="summery-box-1">Broker</p>
+                                <p class="summery-box-1">Position</p>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <h3 class="text-primary">Ongoing</h3>
+                                <p class="summery-box-1">11.03.2022</p>
+                                <p class="summery-box-1">11.03.2022</p>
+                                <p class="summery-box-1">11.03.2022.00.00 GET</p>
+                                <p class="summery-box-1">Row Trading Ltd</p>
+                                <p class="summery-box-1">Meta Trader</p>
+
+                            </div>
+                            <div class="col-lg-3">
+                                <h3 class="text-primary">Summary</h3>
+                                <p class="summery-box-1">Balance</p>
+                                <p class="summery-box-1">Equity</p>
+                                <p class="summery-box-1">Win Rate</p>
+                                <p class="summery-box-1">Number Of Trades</p>
+                                <p class="summery-box-1">Number Of Lots</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <h3 class="text-primary">Ongoing</h3>
+                                <p class="summery-box-1">$5345.3</p>
+                                <p class="summery-box-1">$666.22</p>
+                                <p class="summery-box-1">23</p>
+                                <p class="summery-box-1">14.03.2022 12:12 GET</p>
+                                <p class="summery-box-1">23</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main">
+                            <div class="accordion" id="faq">
+                                <div class="card">
+                                    <div class="card-header" id="faqhead1">
+                                        <a href="#" class="btn btn-header-link" data-toggle="collapse"
+                                            data-target="#faq1" aria-expanded="true" aria-controls="faq1">Trading
+                                            History</a>
+                                    </div>
+                                    <div id="faq1" class="collapse show" aria-labelledby="faqhead1" data-parent="#faq">
+                                        <div class="card-body car-1">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="trading mt-3">
+                                                        <table class="table table-res">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" class="ticket-1">No</th>
+                                                                    <th scope="col" class="ticket-1">Ticket#</th>
+                                                                    <th scope="col" class="ticket-1">Type</th>
+                                                                    <th scope="col" class="ticket-1">Open Time</th>
+                                                                    <th scope="col" class="ticket-1">Close Time</th>
+                                                                    <th scope="col" class="ticket-1">Symbol</th>
+                                                                    <th scope="col" class="ticket-1">Lots</th>
+                                                                    <th scope="col" class="ticket-1">NetProfit</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">1</th>
+                                                                    <td>3041537</td>
+                                                                    <td>Buy</td>
+                                                                    <td>2020-11-10 14:31:33</td>
+                                                                    <td>2021-3-20 3:33:22</td>
+                                                                    <td>Euro230</td>
+                                                                    <td>2.00</td>
+                                                                    <td>$435.44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">2</th>
+                                                                    <td>7078001</td>
+                                                                    <td>Sold</td>
+                                                                    <td>2020-16-09 15:21:33</td>
+                                                                    <td>3021-5-60 8:43:11</td>
+                                                                    <td>Euro10.00</td>
+                                                                    <td>25.00</td>
+                                                                    <td>$866.44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">3</th>
+                                                                    <td>7078001</td>
+                                                                    <td>Sold</td>
+                                                                    <td>2020-16-09 15:21:33</td>
+                                                                    <td>3021-5-60 8:43:11</td>
+                                                                    <td>Euro10.00</td>
+                                                                    <td>25.00</td>
+                                                                    <td>$866.44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">4</th>
+                                                                    <td>7078001</td>
+                                                                    <td>Sold</td>
+                                                                    <td>2020-16-09 15:21:33</td>
+                                                                    <td>3021-5-60 8:43:11</td>
+                                                                    <td>Euro10.00</td>
+                                                                    <td>25.00</td>
+                                                                    <td>$866.44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">5</th>
+                                                                    <td>7078001</td>
+                                                                    <td>Sold</td>
+                                                                    <td>2020-16-09 15:21:33</td>
+                                                                    <td>3021-5-60 8:43:11</td>
+                                                                    <td>Euro10.00</td>
+                                                                    <td>25.00</td>
+                                                                    <td>$866.44</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main">
+                            <div class="accordion mt-3" id="faq">
+                                <div class="card">
+                                    <div class="card-header" id="faqhead2">
+                                        <a href="#" class="btn btn-header-link" data-toggle="collapse"
+                                            data-target="#faq2" aria-expanded="true" aria-controls="faq2">Trading
+                                            Days</a>
+                                    </div>
+
+                                    <div id="faq2" class="collapse show" aria-labelledby="faqhead2" data-parent="#faq">
+                                        <div class="card-body car-1">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="trading mt-3">
+                                                        <table class="table table-res">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" class="ticket-1">No</th>
+                                                                    <th scope="col" class="ticket-1">Ticket#</th>
+                                                                    <th scope="col" class="ticket-1">Type</th>
+                                                                    <th scope="col" class="ticket-1">Open Time</th>
+                                                                    <th scope="col" class="ticket-1">Close Time</th>
+                                                                    <th scope="col" class="ticket-1">Symbol</th>
+                                                                    <th scope="col" class="ticket-1">Lots</th>
+                                                                    <th scope="col" class="ticket-1">NetProfit</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">1</th>
+                                                                    <td>3041537</td>
+                                                                    <td>Buy</td>
+                                                                    <td>2020-11-10 14:31:33</td>
+                                                                    <td>2021-3-20 3:33:22</td>
+                                                                    <td>Euro230</td>
+                                                                    <td>2.00</td>
+                                                                    <td>$435.44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">2</th>
+                                                                    <td>7078001</td>
+                                                                    <td>Sold</td>
+                                                                    <td>2020-16-09 15:21:33</td>
+                                                                    <td>3021-5-60 8:43:11</td>
+                                                                    <td>Euro10.00</td>
+                                                                    <td>25.00</td>
+                                                                    <td>$866.44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">2</th>
+                                                                    <td>7078001</td>
+                                                                    <td>Sold</td>
+                                                                    <td>2020-16-09 15:21:33</td>
+                                                                    <td>3021-5-60 8:43:11</td>
+                                                                    <td>Euro10.00</td>
+                                                                    <td>25.00</td>
+                                                                    <td>$866.44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">3</th>
+                                                                    <td>7078001</td>
+                                                                    <td>Sold</td>
+                                                                    <td>2020-16-09 15:21:33</td>
+                                                                    <td>3021-5-60 8:43:11</td>
+                                                                    <td>Euro10.00</td>
+                                                                    <td>25.00</td>
+                                                                    <td>$866.44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">4</th>
+                                                                    <td>7078001</td>
+                                                                    <td>Sold</td>
+                                                                    <td>2020-16-09 15:21:33</td>
+                                                                    <td>3021-5-60 8:43:11</td>
+                                                                    <td>Euro10.00</td>
+                                                                    <td>25.00</td>
+                                                                    <td>$866.44</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">5</th>
+                                                                    <td>7078001</td>
+                                                                    <td>Sold</td>
+                                                                    <td>2020-16-09 15:21:33</td>
+                                                                    <td>3021-5-60 8:43:11</td>
+                                                                    <td>Euro10.00</td>
+                                                                    <td>25.00</td>
+                                                                    <td>$866.44</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="custfooter">
+        <div style="box-shadow: 0px 0px 1px 2px #243a47">
+            <div class="container-fluid bg-light">
+                <div class="row text-center">
+                    <div class="col-lg-4 mt-3">
+                        <div>
+                            <a href="#"><img
+                                    src="../../assets/images/thumbnail_Monitor-Line LOGO.jpg" height="100" width="150"
+                                    alt="monitor-line" class="img-responsive"></a>
+                            <p style="color:#000; font-size:15px;">Monitor Line</p>
+                            <p style="color:#000;font-size:15px;">ABN: 24 652 401 360</p>
+                            <p style="color:#000;font-size:15px;">903/50 Clarence St</p>
+                            <p style="color:#000;font-size:15px;">Sydney NSW 2000</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-5">
+                        <div>
+                            <p class="text-dark">Get Started</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-5">
+                        <p class="text-dark">Contact Us</p>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div style="margin-left:130px; margin-top:30px;">
+                            <h3 style="font-size:16px;">PAGES</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li>Home</li>
+                                <li>About Us</li>
+                                <li>Pricing</li>
+                                <li>Contact Us</li>
+                                <li>FAQ</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="uti">
+                            <h3 style="font-size:16px;">UTILITY PAGES</h3>
+                            <ul class="list-unstyled mt-3">
+                                <li>Coming Soon</li>
+                                <li>Term & Condition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
